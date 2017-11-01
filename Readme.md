@@ -36,6 +36,10 @@ Welcome to Node.js Express Training Program
 - Event loop
 - Closure assures that the variables are available to the last one of internal function even when not supplied explicitely, but then these should NOT be specified in the exported callback'ed functions as well.
 
+###   04NodeHttpServer
+- A basic http server
+- Notice teh `huh` in package.json - now `npm huh` will do things similar to `npm start` or `node index`.
+
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
