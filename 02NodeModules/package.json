@@ -1,0 +1,17 @@
+{
+  "name": "node-examples",
+  "version": "1.0.0",
+  "description": "\"A simple, basic node examplle\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Oopsie-doopsie aka Error: no test specified\" && exit 1", 
+    "start": "node index"
+  },
+  "keywords": [
+    "Node",
+    "Node_Modules",
+    "Example"
+  ],
+  "author": "Y.Mahajan",
+  "license": "ISC"
+}
