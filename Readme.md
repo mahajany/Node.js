@@ -36,9 +36,19 @@ Welcome to Node.js Express Training Program
 - Event loop
 - Closure assures that the variables are available to the last one of internal function even when not supplied explicitely, but then these should NOT be specified in the exported callback'ed functions as well.
 
-###   04NodeHttpServer
+4. ###   04NodeHttpServer
 - A basic http server
-- Notice teh `huh` in package.json - now `npm huh` will do things similar to `npm start` or `node index`.
+- Notice the `huh` in package.json - now `npm huh` will do things similar to `npm start` or `node index`.
+- try server.end() with and withou the inline html code.
+
+
+5. ###   05NodeHttpServer
+- Expand server crated in last module to server static resources 
+- Create aboutus.html and index.html in a folder named as public
+- Now fs and path modules will be used
+
+
+
 
 
 ## Resources:
