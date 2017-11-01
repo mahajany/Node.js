@@ -23,8 +23,8 @@ Welcome to Node.js Express Training Program
 
     
 3. ### 03Callbacks_n_ErrorHandling$
-### Callbacks
-### Error handling
+#### Callbacks
+#### Error handling
 *Closures:* 
 - Functionl lanugages.
 - A function defined inside another function has access to all the variables declared in the outer function (outer scope). 
@@ -35,3 +35,11 @@ Welcome to Node.js Express Training Program
 - NOde, Async I/O and Callback - Node is spawned in a single thread event-loop.
 - Event loop
 - Closure assures that the variables are available to the last one of internal function even when not supplied explicitely, but then these should NOT be specified in the exported callback'ed functions as well.
+
+
+## Resources:
+Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
+
+[Top 10 most common mistakes that Node.js developers make] (https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes)
+
+[Asynchronous JavaScript with Callbacks](https://brandonwamboldt.ca/asynchronous-javascript-with-callbacks-1769/)
