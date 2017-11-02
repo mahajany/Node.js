@@ -56,7 +56,14 @@ Welcome to Node.js Express Training Program
 - Express dependencies.
 - package.log.json file in dependencies.
 - `npm express --save`
-- middleware
+- Add a .gitignore file with "node_modules" writtne in it.
+
+7. ### 07ExpressMiddleware
+- middleware 
+- morgan - for logging.
+- Static files will be picked up automatically.
+
+
 
 
 
