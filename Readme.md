@@ -63,6 +63,15 @@ Welcome to Node.js Express Training Program
 - morgan - for logging.
 - Static files will be picked up automatically.
 
+8. ### 08ExpressREST
+- REST API / En-points
+- Express routes
+- Body parser
+- Input for post:
+- Use Postman and send this in body using JSON(applicaitn/json):
+    {"name": "Pasta", "description": "Yumm yummy, fat tummmy!"}
+    GET/POST/PUT/DELETE - with and w/o a dishId
+- Check IndexNew.js - run it as `node indexNew.js` - it contains Express 4.x syntax.
 
 
 
