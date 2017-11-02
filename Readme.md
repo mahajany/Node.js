@@ -98,7 +98,8 @@ Welcome to Node.js Express Training Program
 12. ### 12NodeMongo
 - `npm install assert mongodb --save`
 - assert: Try changing URL from localhost to lcoalhost... 
-- Define all teh database operations in `operations.js` and call these in `indexWithFile.js` - see a neste set of callbacks() - a callback hell!!
+- Define all teh database operations in `operations.js` and call these in `indexWithFile.js` - see a nested set of callbacks() - a *callback hell*!!
+- `operationsWithPromises.js` - Replace callbacks with "Promses" - e.g. return `return coll.insert(document);` instead of specifying the last function as a callback function.
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
