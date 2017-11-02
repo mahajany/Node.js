@@ -72,15 +72,31 @@ Welcome to Node.js Express Training Program
     {"name": "Pasta", "description": "Yumm yummy, fat tummmy!"}
     GET/POST/PUT/DELETE - with and w/o a dishId
 - Check IndexNew.js - run it as `node indexNew.js` - it contains Express 4.x syntax.
+- Run both servers simultaneously on 3000 and 3100 - `npm start` and `node indexNew`.
+[ExpressJS - Migrating to 4](https://expressjs.com/en/guide/migrating-4.html#core-changes)
+
+9. ### 09ExpressRESTRoutes 
+- Arrange URLs / resources / end-points in different routes.
+- "mini" express apps - routes.
+- routes/dishRouter.js - contains implementation of dishes and dishes/:id routes.
+- morgen vs logger (using winston - see `logger.js`)
 
 
 
-
-
+11. ### 11ExpressGenerator/
+ - `express app_name` - generates the scaffolding.
+ - You can choose jade, pug...or even angular for client safing.
+ - app.js, package.json, public:staic resources, routes:application-routes, views: application-routes.
+  - npm install -g express-generator
+  - notice now app.js is the default start up, and default routes of index.js and users.js are provided.
+  - Configuration Information like port, server api is in file bin/wwww
+  - You might have to install extra loggers (winston) and create a logger.js file
+  - If you want to start on port 1211 instead of default (3000, in file www), export the variable: `export PORT=1211` ; `npm start` ==> App-server starting at 1211
+  - [Express Generator] http://expressjs.com/en/starter/generator.html
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
 
-[Top 10 most common mistakes that Node.js developers make] (https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes)
+[Top 10 most common mistakes that Node.js developers make](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes)
 
 [Asynchronous JavaScript with Callbacks](https://brandonwamboldt.ca/asynchronous-javascript-with-callbacks-1769/)

@@ -18,6 +18,13 @@ app.use(bodyParser.json()); //Allows you to use json requess in body
 //     next();
 // });
 
+app.all('/dishes', (req, res, next) =>{ 
+    /***** this was present in version 3.x - NOT needed in 4.x now******/
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'text/plain');
+      next();
+  });
+ 
 /* get*/
 app.get('/dishes', (req, res, next) =>{
     res.end('Will send all the dishes to you!');
