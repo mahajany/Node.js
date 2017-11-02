@@ -47,6 +47,17 @@ Welcome to Node.js Express Training Program
 - Create aboutus.html and index.html in a folder named as public
 - Now fs and path modules will be used
 
+6. ### 06Express
+- A fast, unopinionated, minimalist web framewrok for Node.js
+- 3rd party "middleware" to extend functionality
+- `npm express --save`
+- Morgan for loggin
+- "dependencies" - in package.json
+- Express dependencies.
+- package.log.json file in dependencies.
+- `npm express --save`
+- middleware
+
 
 
 
