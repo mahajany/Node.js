@@ -92,11 +92,17 @@ Welcome to Node.js Express Training Program
   - Configuration Information like port, server api is in file bin/wwww
   - You might have to install extra loggers (winston) and create a logger.js file
   - If you want to start on port 1211 instead of default (3000, in file www), export the variable: `export PORT=1211` ; `npm start` ==> App-server starting at 1211
-  - [Express Generator] http://expressjs.com/en/starter/generator.html
+  - [Express Generator](http://expressjs.com/en/starter/generator.html)
+
+
+12. ### 12NodeMongo
+- `npm install assert mongodb --save`
+- assert: Try changing URL from localhost to lcoalhost...
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
 
+[Node.js v9.0.0 Documentation](https://nodejs.org/api/modules.html)
 [Top 10 most common mistakes that Node.js developers make](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes)
 
 [Asynchronous JavaScript with Callbacks](https://brandonwamboldt.ca/asynchronous-javascript-with-callbacks-1769/)
