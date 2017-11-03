@@ -1,4 +1,4 @@
-Welcome to Node.js Express Training Program
+Node.js Express Training Program
 ==============================================
 * Node.JS
 * Express
@@ -9,10 +9,10 @@ Welcome to Node.js Express Training Program
     v9.0.0 
 
 
-1. ### 01Start
+### 1.  01Start
    #### Imported module 
 
-2. ### 02NodeModules 
+### 2. 02NodeModules 
     #### Functions is the same file 
     - Initialize it as: `npm init` 
     - Run it as: npm start 
@@ -22,7 +22,7 @@ Welcome to Node.js Express Training Program
     - `npm start` _VS_ `node index` 
 
     
-3. ### 03Callbacks_n_ErrorHandling$
+### 3. 03Callbacks_n_ErrorHandling$
 #### Callbacks
 #### Error handling
 *Closures:* 
@@ -36,18 +36,18 @@ Welcome to Node.js Express Training Program
 - Event loop
 - Closure assures that the variables are available to the last one of internal function even when not supplied explicitely, but then these should NOT be specified in the exported callback'ed functions as well.
 
-4. ###   04NodeHttpServer
+### 4.   04NodeHttpServer
 - A basic http server
 - Notice the `huh` in package.json - now `npm huh` will do things similar to `npm start` or `node index`.
 - try server.end() with and withou the inline html code.
 
 
-5. ###   05NodeHttpServer
+### 5.   05NodeHttpServer
 - Expand server crated in last module to server static resources 
 - Create aboutus.html and index.html in a folder named as public
 - Now fs and path modules will be used
 
-6. ### 06Express
+### 6. 06Express
 - A fast, unopinionated, minimalist web framewrok for Node.js
 - 3rd party "middleware" to extend functionality
 - `npm express --save`
@@ -58,12 +58,12 @@ Welcome to Node.js Express Training Program
 - `npm express --save`
 - Add a .gitignore file with "node_modules" writtne in it.
 
-7. ### 07ExpressMiddleware
+### 7. 07ExpressMiddleware
 - middleware 
 - morgan - for logging.
 - Static files will be picked up automatically.
 
-8. ### 08ExpressREST
+### 8. 08ExpressREST
 - REST API / En-points
 - Express routes
 - Body parser
@@ -75,7 +75,7 @@ Welcome to Node.js Express Training Program
 - Run both servers simultaneously on 3000 and 3100 - `npm start` and `node indexNew`.
 [ExpressJS - Migrating to 4](https://expressjs.com/en/guide/migrating-4.html#core-changes)
 
-9. ### 09ExpressRESTRoutes 
+### 9. 09ExpressRESTRoutes 
 - Arrange URLs / resources / end-points in different routes.
 - "mini" express apps - routes.
 - routes/dishRouter.js - contains implementation of dishes and dishes/:id routes.
@@ -83,7 +83,7 @@ Welcome to Node.js Express Training Program
 
 
 
-11. ### 11ExpressGenerator/
+### 11. 11ExpressGenerator/
  - `express app_name` - generates the scaffolding.
  - You can choose jade, pug...or even angular for client safing.
  - app.js, package.json, public:staic resources, routes:application-routes, views: application-routes.
@@ -95,11 +95,11 @@ Welcome to Node.js Express Training Program
   - [Express Generator](http://expressjs.com/en/starter/generator.html)
 
 
-12. ### 12NodeMongo
-- `npm install assert mongodb --save`
-- assert: Try changing URL from localhost to lcoalhost... 
-- Define all teh database operations in `operations.js` and call these in `indexWithFile.js` - see a nested set of callbacks() - a *callback hell*!!
-- `operationsWithPromises.js` - Replace callbacks with "Promses" - e.g. return `return coll.insert(document);` instead of specifying the last function as a callback function.
+### 12. 12NodeMongo
+#### ODM  / ORM - Mongoose
+- `npm install mongoose bluebird --save`
+
+
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
