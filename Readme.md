@@ -1,16 +1,16 @@
 Node.js Express Training Program
 ==============================================
 * Node.JS
-* Express
-2017-11-01: Versions: 
+* Express 
+*  Versions used as on Date: 2017-11-01: 
     $ npm -v 
     5.5.1 
-    $ node -v 
+    $ node -v  
     v9.0.0 
 
 
 ### 1.  01Start
-   #### Imported module 
+   - Imported module 
 
 ### 2. 02NodeModules 
     #### Functions is the same file 
@@ -98,7 +98,7 @@ Node.js Express Training Program
 ### 12. 12NodeMongo
 #### ODM  / ORM - Mongoose
 - `npm install mongoose bluebird --save`
-
+- 
 
 
 ## Resources:
