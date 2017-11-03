@@ -99,6 +99,28 @@ Node.js Express Training Program
 #### ODM  / ORM - Mongoose
 - `npm install mongoose bluebird --save`
 - 
+### 13. 13NodeMongoose
+    - Use Mongoose instead of Node Mongo Driver
+    - Using sub-document
+
+#### 14REST-Express-MongoDB-Mongoose
+    - Bring this all together - REST API using Express with MongoDB at backend and Mongoose as ODM.
+    - ` npm install mongoose-currency`
+    - Use following JSON documen for adding dishes:
+    `
+    {
+    "name":           "Pizza",
+    "description":    "Ice-ice baby!",
+    "comments":       [{"rating":5, "comment":"Good one!", "author": "Yogesh"},
+                       {"rating":3, "comment":"OK types!", "author": "Mahajan"}],
+    "image":          "pizza.png",
+    "category":       "Junk food",
+    "label":          "Safe For Kids",
+    "price":          250,
+    "featured":       true
+    }
+    `
+
 
 
 ## Resources:
