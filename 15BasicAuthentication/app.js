@@ -42,9 +42,10 @@ function auth(req, res, next){
   
   if(!authHeader){
     var err = new Error('Unauthenticated user');
-    res.setHeader('WWW-Authenicate', 'Basic');
-    err.sstatus=401;
+    res.setHeader('WWW-Authenticate', 'Basic');
+    err.status=401;
     next(err);
+    return;
   }
 
   var auth = new Buffer(authHeader.split(' ')[1], 'base64') //Strinnng will be          splitttttted        ina n arrao of two items
