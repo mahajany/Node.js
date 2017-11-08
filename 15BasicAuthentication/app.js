@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
@@ -34,20 +33,25 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('12345-67890-the-secret-key'));
 
+/**************************************/
 function auth(req, res, next){
+  /**************************************/
+  console.log(req.signedCokkies);
   console.log("AUTH FUNCTION:" + req.headers);
-  var authHeader =  req.headers.authorization;
   
-  if(!authHeader){
-    var err = new Error('Unauthenticated user');
-    res.setHeader('WWW-Authenticate', 'Basic');
-    err.status=401;
-    next(err);
-    return;
-  }
+  if(!req.signedCokkies){
+    var authHeader =  req.headers.authorization;
 
+    if(!authHeader){
+      var err = new Error('Unauthenticated user');
+      res.setHeader('WWW-Authenticate', 'Basic');
+      err.status=401;
+      next(err);
+      return;
+    }
+  
   var auth = new Buffer(authHeader.split(' ')[1], 'base64') //Strinnng will be          splitttttted        ina n arrao of two items
               .toString()
               .split(':');      //You'll get an array of 2 - user-name and password
@@ -55,14 +59,22 @@ function auth(req, res, next){
   var password = auth[1];
   
   if(username === 'admin' && password === 'password'){
-    next();
+    res.cookie('user', 'admin', {signed: true});
+    next(); //Authorized - move to next
   } else {
     var err = new Error('Unauthenticated user - invalid ID or password');
     res.setHeader('WWW-Authenticate', 'Basic');
     err.status=401;
     next(err);
-    return;
-
+  }
+} else {
+    if(req.signedCookies.user === 'admin'){
+      next();
+    } else{
+      var err = new Error('Not authenticted - all earlier attempts failed');
+      err.status=401;
+      return next(err);
+    }
   }
 }
 //Add authentication layer for any piont to be accessed after this point
