@@ -5,6 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var session = require('express-session');
+var fileStore = require('session-file-store')(session);
+
+
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
 
@@ -33,15 +37,26 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser('12345-67890-the-secret-key'));
+//app.use(cookieParser('12345-67890-the-secret-key'));
+//Now replace last line with seession
+app.use(session({
+  name:'session-id',
+  secret:'12345-67890-the-secret-key',
+  saveUnintialized: false,
+  resave: false,
+  store: new fileStore()
+}));
+
 
 /**************************************/
 function auth(req, res, next){
   /**************************************/
-  console.log(req.signedCokkies);
+  //console.log("COOKIES:" + req.signedCokkies);
+    console.log("SESSION:" + req.session);
   console.log("AUTH FUNCTION:" + req.headers);
   
-  if(!req.signedCokkies){
+  //if(!req.signedCookies){
+  if(!req.session.user){    
     var authHeader =  req.headers.authorization;
 
     if(!authHeader){
@@ -59,7 +74,9 @@ function auth(req, res, next){
   var password = auth[1];
   
   if(username === 'admin' && password === 'password'){
-    res.cookie('user', 'admin', {signed: true});
+  //  res.cookie('user', 'admin', {signed: true});
+    req.session.user='admin';
+
     next(); //Authorized - move to next
   } else {
     var err = new Error('Unauthenticated user - invalid ID or password');
@@ -68,7 +85,8 @@ function auth(req, res, next){
     next(err);
   }
 } else {
-    if(req.signedCookies.user === 'admin'){
+    //if(req.signedCookies.user === 'admin'){
+    if(req.session.user === 'admin'){
       next();
     } else{
       var err = new Error('Not authenticted - all earlier attempts failed');
