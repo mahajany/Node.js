@@ -3,8 +3,6 @@ const Schema = mongoose.Schema;
 require('mongoose-currency').loadType(mongoose);
 const Currency = mongoose.Types.Currency;
 
-
-
 const commentSchema = new Schema({
     rating:     { type: Number, min:1, max:5, requied: true },
     comment:    { type: String, required:true } ,

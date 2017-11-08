@@ -58,9 +58,10 @@ function auth(req, res, next){
     next();
   } else {
     var err = new Error('Unauthenticated user - invalid ID or password');
-    res.setHeader('WWW-Authenicate', 'Basic');
-    err.sstatus=401;
+    res.setHeader('WWW-Authenticate', 'Basic');
+    err.status=401;
     next(err);
+    return;
 
   }
 }

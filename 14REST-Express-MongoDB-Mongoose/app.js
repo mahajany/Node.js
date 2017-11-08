@@ -19,7 +19,7 @@ var leadersRouter = require('./routes/leadersRouter');
 
 const dbConnection = mongoose.connect(URL, {useMongoClient: true});
 dbConnection.then((db) => {
-  console.log('Connected correctly to server');
+  console.log('Connected successfully to MongoDB Server');
 })
 
 
