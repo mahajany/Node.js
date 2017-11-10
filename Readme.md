@@ -120,8 +120,23 @@ Node.js Express Training Program
     "featured":       true
     }
     `
+#### 15BasicAuthentication
+    - Basic authentcation
+    - Different git version shows how to use basic-authentication throu use-id and password, and then token,
+    - User ID "admin" and password "password" are hard-coded in app.js
 
+###  16HandlingUsers
+    - Authentication through "users" table in MongoDB    
 
+    -     - For validation, use Postman - POST, JSON(application/json), with folloowing in raw body:{
+        username: "someid",
+        password: "whatever"
+    }
+    - login, logout and signup pages.
+    - See kids....it should be "module.exports" in the last line of model, otherwise you will keep on getting User.findOne() is NOT a function and will be, like me, clueless - remember an extra S.
+    - ...and the problem is that it won't fail - so, req.body.username OR req.body.user - it will still try to do a .save!!
+
+}
 
 ## Resources:
 Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.github.com%2Fon-demand%2Fdownloads%2Fgithub-git-cheat-sheet.pdf>
@@ -130,3 +145,5 @@ Git cheat sheet - <https://docs.google.com/viewer?url=https%3A%2F%2Fservices.git
 [Top 10 most common mistakes that Node.js developers make](https://www.toptal.com/nodejs/top-10-common-nodejs-developer-mistakes)
 
 [Asynchronous JavaScript with Callbacks](https://brandonwamboldt.ca/asynchronous-javascript-with-callbacks-1769/)
+
+[Developing a REST API with Node, Mongo and Express - see the diagram about middleware](http://adrianmejia.com/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/)
