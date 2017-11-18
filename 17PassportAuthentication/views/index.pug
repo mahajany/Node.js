@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  h1= title
+  #{message}
+  p Welcome to #{title}
+  p This is the home page of the application.
+  | This page will load without restarting the application. 
+
+  table
+    tr  
+      td 
+        a(href='/users/login') Login 
+    tr  
+      td 
+        a(class='button' href='/users/logout') Logout
+    tr  
+      td 
+        a(class='button', href='/dishes') Dishes
+    tr  
+      td 
+        a(class='button', href='/promotions') Promotions
+    tr  
+      td 
+        a(class='button', href='/leaders') Leaders
+  p
+
+  h2 Login
+  form(method='POST' action='/users/login')
+    label(for='username') Username 
+    input.form-control(type='text' id='username' placeholder='username' name='username')
+    br
+    label(for='password') Password   
+    input.form-control(type='password' id='password' placeholder='password' name='password')
+    br
+    button.btn.btn-primary(type='submit') Log in 
+  br
+  
+  h2 Sign Up
+  form(method='POST' action='/users/signup')
+    label(for='username') Username 
+    input.form-control(type='text' id='username' placeholder='username' name='username')
+    br
+    label(for='password') Password   
+    input.form-control(type='password' id='password' placeholder='password' name='password')
+    br
+    button.btn.btn-primary(type='submit') Signup
